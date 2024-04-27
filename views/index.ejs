@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your salah</title>
+</head>
+<body>
+   
+    <% if(locals.isPress===true){ %>
+        <h1>yay</h1>
+         <% } else{%>
+           <h1>Your Salah</h1>
+           <% } %>
+    
+
+   <form action="/city" method="POST">
+    <input type="text" name="Ci_name" placeholder="city name">
+    <input type="text" name="Co_name" placeholder="country name">
+    <input type="submit" value="OK" class="nameC">
+  </form>
+ 
+</body>
+<script type="text/javascript" src="index1.js"></script>
+</html>
