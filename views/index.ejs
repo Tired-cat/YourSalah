@@ -8,7 +8,7 @@
 <body>
    
     <% if(locals.isPress===true){ %>
-        <h1>yay</h1>
+        <h1>Here's your output</h1>
          <% } else{%>
            <h1>Your Salah</h1>
            <% } %>
@@ -19,6 +19,14 @@
     <input type="text" name="Co_name" placeholder="country name">
     <input type="submit" value="OK" class="nameC">
   </form>
+
+  <% if(locals.isPress===true){ %>
+    <%- include("search.ejs") %>
+     <% } else{%>
+       <h2>Please Enter the required variables</h2>
+       <% } %>
+
+
  
 </body>
 <script type="text/javascript" src="index1.js"></script>
