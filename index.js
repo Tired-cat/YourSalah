@@ -27,8 +27,8 @@ app.post("/city",async (req,res)=>{
     var Ci_n=req.body["Ci_name"]
     var Co_n=req.body["Co_name"]
 
-    console.log(Ci_n)
-    console.log(Co_n)
+    console.log("Your city name is "+Ci_n)
+
 try{
  const response=await axios.get(`http://api.aladhan.com/v1/timingsByCity?city=${Ci_n}&country=${Co_n}&method=2`)
 var timings=response.data.data.timings
@@ -68,6 +68,7 @@ return{
 }
 
 }
+
 //saving the output of 12 hour format in a var for easier refrence
 var asr12=timeConverter(req, res, null, timings).asr;
 var maghrib12=timeConverter(req, res, null, timings).maghrib
@@ -92,6 +93,8 @@ catch(error){
 app.listen(port,()=>{
     console.log(`port running at port ${port}`)
 })
+
+
 
 
 

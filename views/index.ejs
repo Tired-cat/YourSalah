@@ -13,13 +13,14 @@
            <h1>Your Salah</h1>
            <% } %>
     
-
+   
    <form action="/city" method="POST">
-    <input type="text" name="Ci_name" placeholder="city name">
-    <input type="text" name="Co_name" placeholder="country name">
+    <input  type="text" name="Ci_name" placeholder="city name"  >
+   <input type="text" name="Co_name" placeholder="country name">
     <input type="submit" value="OK" class="nameC">
   </form>
-
+   
+  
   <% if(locals.isPress===true){ %>
     <%- include("search.ejs") %>
      <% } else{%>
