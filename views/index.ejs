@@ -13,12 +13,19 @@
            <h1>Your Salah</h1>
            <% } %>
     
-
+ <div class="search-box">
+  <div class="row">
    <form action="/city" method="POST">
-    <input type="text" name="Ci_name" placeholder="city name">
-    <input type="text" name="Co_name" placeholder="country name">
+    <input type="text" name="Ci_name" placeholder="city name" id="Seacrh-me" autocomplete="off">
     <input type="submit" value="OK" class="nameC">
+    <div class="result-box">
+    <!--add suggestions--->
+    </div>
   </form>
+   </div>
+</div>
+
+
 
   <% if(locals.isPress===true){ %>
     <%- include("search.ejs") %>
@@ -29,5 +36,7 @@
 
  
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="index1.js"></script>
 </html>
+<!--hello -->
